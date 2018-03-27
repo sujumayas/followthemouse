@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Follow the mouse</title>
+</head>
+<body>
+	<img src="gato.gif" alt="Gato" id="gato">
+	<script>
+		var gato = document.getElementById("gato");
+		document.addEventListener("mousemove", function(e){
+			var x = e.clientX;
+			var y = e.clientY;
+			gato.style.top = y+"px";
+			gato.style.left = x+"px";
+		});
+
+	</script>
+	<style>
+		#gato{
+			position: absolute;
+			max-width:50px;
+			height: auto;
+		}
+	</style>
+</body>
+</html>
